@@ -1,0 +1,56 @@
+:root {
+    /* Colores y fuentes */
+    --primary-color: rgba(30, 64, 35, 0.7);
+    --primary2-color: rgba(101, 140, 90, 0.7);
+    --secondary-color: rgba(217, 193, 150, 0.4);
+    --secondary2-color: rgba(217, 193, 150, 0.9);
+    --contrast-color: rgb(166, 104, 81);
+    --primary-font: "Rubik", sans-serif;
+  }
+  
+  * {
+    /* Estilos globales, incluyendo el box-sizing */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+  
+  html {
+    /* Define la base de la unidad rem (1rem = 10px) */
+    font-size: 10px !important; 
+  }
+  
+  body {
+    /* Estilos para el cuerpo de la página, incluyendo el fondo */
+    font-family: var(--primary-font) !important;
+    background-image: url("./assets/dogs_and_cats/Family.jpg");
+    background-size: cover; /* Asegura que cubra toda la pantalla sin deformarse */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+    overflow-x: hidden; /* Evita que aparezca scroll horizontal */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body::before { 
+    /* Agrega una capa para oscurecer el fondo */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad */
+    z-index: -1; /* Mantenerlo detrás del contenido */
+  }
+  
+  html, body {
+    /* Estilos para el cuerpo de la página, incluyendo el fondo */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
