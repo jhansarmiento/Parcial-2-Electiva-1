@@ -1,0 +1,90 @@
+/* navbar.css: Glassmorphism fixed top navbar with responsive hamburger menu */
+.navbar-glass {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+  width: 85vw;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+.navbar-logo {
+  height: 4rem;
+}
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.navbar-link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+.navbar-link:hover {
+  color: var(--secondary2-color);
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar-links {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    /* background: rgba(255,255,255,0.85);
+    box-shadow: 0 4px 16px rgba(31,38,135,0.09); */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem 2rem 2rem;
+    gap: 1.5rem;
+    transform: translateY(-120%);
+    transition: transform 0.35s cubic-bezier(0.7, 0, 0.3, 1);
+    pointer-events: none;
+  }
+  .navbar-links.open {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
